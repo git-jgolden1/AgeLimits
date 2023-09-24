@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./ageLimits.js"></script>
+    <title>Age Limits for the ladies ;)</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: unset;
+            font-weight: 600;
+        }
+
+        body *:not(#fate) {
+            border-radius: 10px;
+        }
+
+        #fate, #destiny {
+            background-color: #f7efee;
+            color: #fcdbd9;
+            width: 100%;
+            font-size: 0.8em;
+            position: sticky;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        #page-container {
+            max-width: 625px;
+            width: 80%;
+            background-color: #f7efee;
+            min-height: 80vh;
+            padding: 5%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            margin: 2.5em;
+        }
+
+        h1#result, #result-container span {
+            font-size: 2.5em;
+            line-height: 1.2;
+            font-family: 'Helvetica', sans-serif;
+            text-align: center;
+            color: #251918;
+            font-weight: 900;
+        }
+
+        #result-container span {
+            font-size: 12px;
+            line-height: 2em;
+            display: block;
+        }
+
+        #input-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+
+        #result-container {
+            width: 100%;
+            min-height: 2em;
+            background-color: #ffdad8;
+            padding: 5%;
+            box-sizing: border-box;
+            margin-bottom: 1em;
+        }
+
+        #input-container > {
+            width: 100%;
+        }
+
+        input#age {
+            font-size: 2em;
+            border: unset;
+            padding: 0.8em;
+            text-align: center;
+        }
+
+        input#age:focus {
+            background-color: #ccc5c4;
+            border: unset;
+        }
+
+        input#age:focus-visible {
+            outline-color: #775655;
+        }
+
+        button {
+            cursor: pointer;
+            color: #FFFFFF;
+            border: unset;
+            border-radius: 50px;
+            background-color: #e6bdbb;
+            margin-top: 1em;
+            padding: 0.8em;
+        }
+
+        button:hover {
+            background-color: #c9a2a0;
+        }
+
+        #destiny em {
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+<div id="fate"><em>Will true love find you? Or will your heart be alone forever?</em><em>This fate is shared with many. Who is the exception?</em></div>
+<div id="page-container">
+    <div id="result-container"><h1 id="result">&darr; Enter Your Iniquity &darr;<span>and your desires will be revealed</span></h1></div>
+    <div id="input-container">
+    <input id="age" type="number" onsubmit="youngestGirl(21)"/>
+    <button onClick="submitAge()">Submit</button>
+    </div>
+</div>
+<div id="destiny"><em>2023 BROKEN HEARTS CANNOT LOVE</em></div>
+</body>
+</html>
